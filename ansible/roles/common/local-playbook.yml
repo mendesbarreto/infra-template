@@ -1,6 +1,6 @@
 ---
 - name: local playbook
-  hosts: minibeast_host
+  hosts: local_servers
   remote_user: mendesbarreto
   vars:
     ansible_ssh_pass: "{{ lookup('env', 'MINIBEAST_SSH_PASS') }}"
