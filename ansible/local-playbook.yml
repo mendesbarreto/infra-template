@@ -1,0 +1,9 @@
+- name: local playbook
+  hosts: localhost
+  tasks:
+    - name: get disk space
+      command: df -h
+      register: disk_space
+    - name: print disk space
+      debug:
+        var: disk_space.stdout_lines
